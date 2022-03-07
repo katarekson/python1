@@ -1,13 +1,21 @@
-# imie, wiek, atrakcyjnosc = "Miroslaw", 16, True
 
-# print(imie, wiek, atrakcyjnosc)
+imie = "Mirek"
+# print(len(imie))
 
-# mirek = 20
-# martyna = 20
-# maciek = 20
+# print(imie.find("k"))
 
-# mirek = martyna = maciek = 20
+# print(imie.capitalize())
 
-# print(mirek)
-# print(martyna)
-# print(maciek)
+# print(imie.upper())
+
+# print(imie.lower())
+
+# print(imie.isdigit())
+
+# print(imie.isalpha())
+
+# print(imie.count("e"))
+
+# print(imie.replace("i", "a"))
+
+print(imie*3)
