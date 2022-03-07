@@ -1,36 +1,13 @@
-############################### STR
+# imie, wiek, atrakcyjnosc = "Miroslaw", 16, True
 
-# first_name = 'Mirek'
-# last_name = 'cipka'
-# full_name = first_name + last_name
+# print(imie, wiek, atrakcyjnosc)
 
-# # print("czesc" +name)
+# mirek = 20
+# martyna = 20
+# maciek = 20
 
-# print(type(last_name))
+# mirek = martyna = maciek = 20
 
-# print("hello " +full_name)
-
-################################ INT
-# wiek = 16
-
-# wiek = wiek + 1
-
-# print(type(wiek))
-
-# print("twoim wiekiem jest :" +str(wiek))
-
-##########FLOAT
-
-# wysokosc = 250.5
-
-# print("twoja wyskosc: " + str(wysokosc) +"cm")
-# print(type(wysokosc))
-
-
-############### BOOLEAN
-
-
-czlowiek = True
-print("jestes czlowiekiem? " +str(czlowiek))
-
-print(type(czlowiek))
+# print(mirek)
+# print(martyna)
+# print(maciek)
