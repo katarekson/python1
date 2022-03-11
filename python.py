@@ -1,16 +1,17 @@
-import math
+nazwa = "Miroslaw Klaus"
 
-pi = 3.14
-x = 1
-y = 2
-z = 3
+# pierwsze_imie = nazwa[7] liczba = litera w nazwie
+
+# imie = nazwa[:8] od poczatku do 8 [poczatek:3]
+# nazwisko = nazwa[9:] od 9 do konca [9:koniec]
+# dziwne_imie = nazwa[::1] pokazuje wszystko [poczatek:koniec:co ile]
+# odwrocone_imie = nazwa[::-1] pokazuje na odwrot [poczatek:koniec:-1]
 
 
-# print(round(pi)) 3 
-# print(math.ceil(pi)) 4
-# print(math.floor(pi)) 3
-# print(abs(pi))3.14
-# print(pow(pi, 2)) 3.14^2
-# print(math.sqrt(pi)) 3.14 do kwadratu
-# print(max(x, y, z)) najwieksze 
-# print(min(x, y, z)) najmniejsze 
+strona_internetowa1 = "http://google.com"
+strona_internetowa2 = "http://wikipedia.com"
+
+slice = slice(7,-4)
+
+print(strona_internetowa1[slice])
+print(strona_internetowa2[slice])
