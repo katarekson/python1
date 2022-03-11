@@ -1,10 +1,10 @@
-#type casting = przeksztalcanie data type na inny data type int na str np
-
-x = 1 #int
-y = 2.0 #float
-z = "3" #str
+name = input("Jak masz na imie: ")
+age = int(input("Ile masz lat: "))
+height = float(input("Jak wysoki jestes: "))
 
 
-print("X is "+str(x))
-print(y)
-print(z*3)
+print("Czesc"+name)
+
+print("Masz "+str(age)+" lat")
+
+print("Masz "+str(height)+" cm wysokosci")
