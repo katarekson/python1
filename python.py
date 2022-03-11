@@ -1,21 +1,10 @@
+#type casting = przeksztalcanie data type na inny data type int na str np
 
-imie = "Mirek"
-# print(len(imie))
+x = 1 #int
+y = 2.0 #float
+z = "3" #str
 
-# print(imie.find("k"))
 
-# print(imie.capitalize())
-
-# print(imie.upper())
-
-# print(imie.lower())
-
-# print(imie.isdigit())
-
-# print(imie.isalpha())
-
-# print(imie.count("e"))
-
-# print(imie.replace("i", "a"))
-
-print(imie*3)
+print("X is "+str(x))
+print(y)
+print(z*3)
