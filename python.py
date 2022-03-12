@@ -1,10 +1,10 @@
-wiek = int(input("Ile masz lat?: "))
 
-if wiek == 100:
-    print("Ale jestes stary")
-elif wiek >= 18:
-    print("Jestes dorosly")
-elif wiek < 0:
-    print("Jescze sie nie urodziles")
-else:
-    print("Jestes bobaskiem")
+temperatura = int(input("Jaka jest temperatura na dworze: "))
+
+if not(temperatura >= 0 and temperatura <= 30):
+    print("Temperatura jest zla")
+    print("zostan w domu")
+elif not(temperatura < 0 or temperatura > 30):
+    print("Temperatura jest dobra!")
+    print("wyjdz z domu prosze")
+    
