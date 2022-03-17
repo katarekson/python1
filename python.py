@@ -1,10 +1,15 @@
+import time
 
-from unicodedata import name
+# for i in range(10):
+#     print(i+1)
 
+# for i in range(50,100+1,2):
+#     print(i)
 
-imie = None
+# for i in "Miroslaw Klaus":
+#     print(i)
 
-while not imie:
-    imie = input("Podaj swoje imie: ")
-    
-print("hej " +imie)
+for seconds in range(10,0,-1):
+    print(seconds)
+    time.sleep(2)
+print("Szczesliwego nowego roku!")
