@@ -1,9 +1,10 @@
-napoje = ["kola","kawa","herbata"]
+student = ("Miroslaw",16,"Mezczyzna")
 
-obiad = ["pizza", "spaghetti"]
+print(student.count("Miroslaw"))
+print(student.index("Mezczyzna"))
 
-deser = ["ciasto"]
-
-jedzenie = [napoje,obiad,deser]
-
-print(jedzenie[1][1])
+for x in student:
+    print(x)
+    
+if "Miroslaw" in student:
+    print("Miroslaw jest super")
