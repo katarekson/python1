@@ -1,11 +1,18 @@
-from symtable import Symbol
+# while True:
+#     name = input("Podaj swoje imie: ")
+#     if name != "":
+#         break
 
 
-rows = int(input("Jak duzo rzedow?: "))
-columns = int(input("Jak duzo Kolumn?: "))
-symbol = input("Podaj symbol jaki chcesz uzyc: ")
+# numer_telefonu = "328-323-218"
 
-for i in range(rows):
-    for j in range(columns):
-        print(symbol, end=" ")
-    print()
+# for i in numer_telefonu:
+#     if i == "-":
+#         continue
+#     print(i, end="")
+
+for i in range(1, 21):
+    if i == 13: 
+        pass
+    else:
+        print(i, end=" ")
