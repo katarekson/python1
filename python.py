@@ -1,10 +1,15 @@
-student = ("Miroslaw",16,"Mezczyzna")
+ubrania = {"spodnie","tshirt","majtki"}
+buty = {"jordany", "nike", "addidas", "majtki"}
 
-print(student.count("Miroslaw"))
-print(student.index("Mezczyzna"))
+# ubrania.add("skarpetki")
+# ubrania.remove("tshirt")
+# ubrania.clear()
+# garderoba = ubrania.union(buty)
 
-for x in student:
-    print(x)
-    
-if "Miroslaw" in student:
-    print("Miroslaw jest super")
+
+# for x in garderoba:
+#     print(x)
+
+# print(buty.difference(ubrania))
+
+print(ubrania.intersection(buty))
