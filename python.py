@@ -1,18 +1,15 @@
-# while True:
-#     name = input("Podaj swoje imie: ")
-#     if name != "":
-#         break
+jedzenie = ["pizza", "ser", "hotdog", "pomarancza"]
 
+# jedzenie[0] = "sushi"
 
-# numer_telefonu = "328-323-218"
+# jedzenie.append("lody")
+# jedzenie.remove("pizza")
+# jedzenie.pop()
+# jedzenie.insert(0, "cake")
+# jedzenie.sort()
+# jedzenie.clear()
 
-# for i in numer_telefonu:
-#     if i == "-":
-#         continue
-#     print(i, end="")
+# print(jedzenie[0])
 
-for i in range(1, 21):
-    if i == 13: 
-        pass
-    else:
-        print(i, end=" ")
+for x in jedzenie:
+    print(x)
