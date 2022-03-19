@@ -1,23 +1,13 @@
-stolice = {'Polska':'Warszawa',
-           'Japonia':'Tokio',
-           'Rosja':'Moskwa'}
+nazwa = "mirek Klaus!"
 
-stolice.update({'Niemcy':'Berlin'})
-stolice.update({'Polska':'Krakow'})
-stolice.pop('Rosja')
-stolice.clear()
+# if(imie[0].islower()):
+#     imie = imie.capitalize()
 
-# print(stolice['Niemcy'])
+# imie = nazwa[:5].upper()
 
-# print(stolice.get('Niemcy'))
+# nazwisko = nazwa[6:].lower()
 
-# print(stolice.keys())
+ostatnia_litera = nazwa[-1]
 
-# print(stolice.values())
 
-# print(stolice)
-
-# print(stolice.items())
-
-for key,value in stolice.items():
-    print(key,value)
+print(ostatnia_litera)
