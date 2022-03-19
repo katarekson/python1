@@ -1,13 +1,6 @@
-nazwa = "mirek Klaus!"
-
-# if(imie[0].islower()):
-#     imie = imie.capitalize()
-
-# imie = nazwa[:5].upper()
-
-# nazwisko = nazwa[6:].lower()
-
-ostatnia_litera = nazwa[-1]
-
-
-print(ostatnia_litera)
+def czesc(imie,nazwisko,wiek):
+    print('czesc ' +imie+ " "+nazwisko)
+    print("Masz "+str(wiek)+" lat")
+    print('Milego dnia!')
+    
+czesc("Mirek", "Klaus", "15")
