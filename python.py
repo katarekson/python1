@@ -1,6 +1,8 @@
-def czesc(imie,nazwisko,wiek):
-    print('czesc ' +imie+ " "+nazwisko)
-    print("Masz "+str(wiek)+" lat")
-    print('Milego dnia!')
+def mnozenie(numer1,numer2):
+    return numer1 * numer2
     
-czesc("Mirek", "Klaus", "15")
+    
+x =  mnozenie(6,8)
+
+print(x)
+
