@@ -1,15 +1,23 @@
-ubrania = {"spodnie","tshirt","majtki"}
-buty = {"jordany", "nike", "addidas", "majtki"}
+stolice = {'Polska':'Warszawa',
+           'Japonia':'Tokio',
+           'Rosja':'Moskwa'}
 
-# ubrania.add("skarpetki")
-# ubrania.remove("tshirt")
-# ubrania.clear()
-# garderoba = ubrania.union(buty)
+stolice.update({'Niemcy':'Berlin'})
+stolice.update({'Polska':'Krakow'})
+stolice.pop('Rosja')
+stolice.clear()
 
+# print(stolice['Niemcy'])
 
-# for x in garderoba:
-#     print(x)
+# print(stolice.get('Niemcy'))
 
-# print(buty.difference(ubrania))
+# print(stolice.keys())
 
-print(ubrania.intersection(buty))
+# print(stolice.values())
+
+# print(stolice)
+
+# print(stolice.items())
+
+for key,value in stolice.items():
+    print(key,value)
