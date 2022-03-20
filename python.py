@@ -1,12 +1,6 @@
-def dodaj(*liczby):
-    sum = 0
-    liczby = list(liczby)
-    liczby[0] = 0
-    for i in liczby:
-        sum += i
-    return sum
+def hello(**kwargs):
+    print("Hello",end=" ")
+    for key,value in kwargs.items():
+        print(value,end=" ")
     
-    
-
-
-print(dodaj(1,2,3,10))
+hello(title="Mr.",first="mirek", middle="wlodzimierz", last="klaus")
