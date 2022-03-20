@@ -1,11 +1,17 @@
-# liczba = 3.14159
+import random
 
-# print("Liczba pi wynosi {:.2f}".format(liczba))
+x = random.randint(1,100)
+y = random.random()
 
-liczba = 1000
+mojalista = ['papier','kamien','nozycze']
+z = random.choice(mojalista)
 
-# print("Liczba wynosi {:,}".format(liczba))
+karty = [1,2,3,4,5,6,7,8,9,"J","Q","K","A"]
+random.shuffle(karty)
 
-print("Liczba wynosi {:b}".format(liczba))
-print("Liczba wynosi {:X}".format(liczba))
-print("Liczba wynosi {:E}".format(liczba))
+print(karty)
+
+
+print(z)
+print(x)
+print(y) 
