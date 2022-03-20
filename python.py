@@ -1,8 +1,4 @@
-def mnozenie(numer1,numer2):
-    return numer1 * numer2
-    
-    
-x =  mnozenie(6,8)
+def czesc(pierwsze,srodkowe,ostatnie):
+    print("Czesc "+pierwsze+" "+srodkowe+" "+ostatnie)
 
-print(x)
-
+czesc(ostatnie="Klaus",srodkowe="Wlodzimierz",pierwsze="Mirek")
