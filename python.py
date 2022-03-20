@@ -1,9 +1,8 @@
-zwierze = "krowa"
-przedmiot = "ksiezycem"
+imie = "Mirek"
 
-# print("{} przeskoczyla nad {}".format(zwierze, przedmiot))
-# print("{0} przeskoczyla nad {1}".format(zwierze, przedmiot))
-# print("{zwierze} przeskoczyla nad {przedmiot}".format(zwierze="krowa", przedmiot="ksiezycem"))
-
-text = "{} przeskoczyla nad {}"
-print(text.format(zwierze, przedmiot))
+print("Nazywam sie {}".format(imie))
+print("Nazywam sie {:10}. Milo cie poznac!".format(imie))
+print("Nazywam sie {imie:10}. Milo cie poznac!".format(imie))
+print("Nazywam sie {:<10}. Milo cie poznac!".format(imie))
+print("Nazywam sie {:>10}. Milo cie poznac!".format(imie))
+print("Nazywam sie {:^10}. Milo cie poznac!".format(imie))
