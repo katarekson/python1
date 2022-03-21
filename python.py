@@ -1,17 +1,12 @@
-try:
-    numerator = int(input("Podaj liczbe do podzielenia: "))
-    denominator = int(input("Podaj liczbe przez ktora bedziesz dzielil: "))
-    wynik = numerator / denominator
-except ZeroDivisionError as e:
-    print(e)
-    print("Nie mozesz dzielic przez zero!")
-except ValueError as e:
-    print(e)
-    print("Podawaj tylko liczby")
-except Exception as e:
-    print(e)
-    print("Cos poszlo nie tak")
+import os
+
+path = "C:\\Users\\Miros\\folder"
+
+if os.path.exists(path):
+    print("To istnieje!")
+    if os.path.isfile(path):
+        print("To jest plik!")
+    elif os.path.isdir(path):
+        print("To jest folder!")
 else:
-    print(wynik)
-finally:
-    print("To zawsze sie wykona!")
+    print("To nie istnieje!")
