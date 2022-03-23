@@ -1,6 +1,4 @@
+text = "\nPozdrawiam"
 
-try:
-    with open('test.txt') as file:
-        print(file.read())
-except FileNotFoundError:
-    print("Plik nie znaleziony")
+with open('test.txt','a') as file:
+    file.write(text)
