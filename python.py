@@ -1,7 +1,13 @@
-# copyfile() - kopjuje to co wpliku
-# copy() - copyfile() + permisje + moze byc do katalogu
-# copy2() - copy() + rzeczy typu kiedy zostal stworzony itp
+import os
 
-import shutil
+zrodlo = "folder" 
+cel = "C:\\Users\\Miros\\Desktop\\folder"
 
-shutil.copy('test.txt', 'C:\\Users\\Miros\\Desktop\\kopia.txt')
+try:
+    if os.path.exists(cel):
+        print("Juz istnieje tam taki plik!")
+    else:
+        os.replace(zrodlo,cel)
+        print(zrodlo +" zostalo tam przeniesione")
+except FileNotFoundError:
+    print(zrodlo +" nie zostalo znalezione")
