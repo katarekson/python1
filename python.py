@@ -1,4 +1,7 @@
-text = "\nPozdrawiam"
+# copyfile() - kopjuje to co wpliku
+# copy() - copyfile() + permisje + moze byc do katalogu
+# copy2() - copy() + rzeczy typu kiedy zostal stworzony itp
 
-with open('test.txt','a') as file:
-    file.write(text)
+import shutil
+
+shutil.copy('test.txt', 'C:\\Users\\Miros\\Desktop\\kopia.txt')
