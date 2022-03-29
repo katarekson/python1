@@ -1,13 +1,17 @@
 import os
+import shutil
 
-zrodlo = "folder" 
-cel = "C:\\Users\\Miros\\Desktop\\folder"
+lokalizacja = "test.txt"
 
 try:
-    if os.path.exists(cel):
-        print("Juz istnieje tam taki plik!")
-    else:
-        os.replace(zrodlo,cel)
-        print(zrodlo +" zostalo tam przeniesione")
+    # os.remove(lokalizacja)
+    # os.rmdir(lokalizacja)
+    # shutil.rmtree(lokalizacja)
 except FileNotFoundError:
-    print(zrodlo +" nie zostalo znalezione")
+    print("Plik nie zostal znaleziony")
+except PermissionError:
+    print("Nie masz permisji zeby to usunac")
+except OSError:
+    print("Nie mozesz tego usunac korzystajac z tej funkcji")
+else:
+    print(lokalizacja + " zostalo usuniete")
