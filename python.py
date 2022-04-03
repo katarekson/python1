@@ -1,22 +1,10 @@
-from telefony import Telefon
+from samochody import Samochod
 
+samochod_1 = Samochod("Ferrari","2022","Czerwony")
+samochod_2 = Samochod("BMW","2010","Czarny")
 
-telefon_1 = Telefon("Samsung 19","2022","czarny")
+Samochod.opony = 2
 
-telefon_2 = Telefon("Iphone 9", "2023", "biały")
+print(samochod_1.opony)
+print(samochod_2.opony)
 
-# print(telefon_1.model)
-# print(telefon_1.rok)
-# print(telefon_1.kolor)
-
-telefon_1.przegladanie()
-
-telefon_1.stop()
-
-# print(telefon_2.model)
-# print(telefon_2.rok)
-# print(telefon_2.kolor)
-
-telefon_2.przegladanie()
-
-telefon_2.stop()
