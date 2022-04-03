@@ -1,10 +1,28 @@
-from samochody import Samochod
+class Zwierze:
+    
+    zyje = True
+    
+    def jedzenie(self):
+        print("To zwierze je")
+        
+    def spanie(self):
+        print("To zwierze spi")
+        
+class Zajac(Zwierze):
+    def bieganie(self):
+        print("Ten zajac biega")
+class Ryba(Zwierze):
+    def plywanie(self):
+        print("Ta ryba pływa")
+class Sowa(Zwierze):
+    def latanie(self):
+        print("Ta sowa lata")
 
-samochod_1 = Samochod("Ferrari","2022","Czerwony")
-samochod_2 = Samochod("BMW","2010","Czarny")
 
-Samochod.opony = 2
+zajac = Zajac()
+ryba = Ryba()
+sowa = Sowa()
 
-print(samochod_1.opony)
-print(samochod_2.opony)
-
+zajac.bieganie()
+ryba.plywanie()
+sowa.latanie()
