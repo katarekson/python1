@@ -1,20 +1,26 @@
-class organizm:
+class Ofiara:
     
-    zyje = True
-    
-class zwierze(organizm):
-    
-    def jedzenie(self):
-        print("To zwierze je")
+    def ucieknij(self):
+        print("To zwierze ucieka")
         
-class pies(zwierze):
+class Lowca:
     
-    def szczekanie(self):
-        print("Pies szczeka")
-        
-pies = pies()
-        
-print(pies.zyje)
+    def polowac(self):
+        print("To zwierze poluje")
 
-pies.jedzenie()
-pies.szczekanie()
+
+class Krolik(Ofiara):
+    pass
+
+class Orzel(Lowca):
+    pass
+
+class Ryba(Lowca, Ofiara):
+    pass
+
+krolik = Krolik()
+orzel = Orzel()
+ryba = Ryba()
+
+krolik.ucieknij
+orzel.poluje
