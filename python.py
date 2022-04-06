@@ -1,28 +1,11 @@
-class Ofiara:
+class Zwierze:
     
-    def ucieknij(self):
-        print("To zwierze ucieka")
+    def jedzenie(self):
+        print("To zwierze je")
         
-class Lowca:
-    
-    def polowac(self):
-        print("To zwierze poluje")
+class Zajac(Zwierze):
+    def jedzenie(self):
+        print("Ten zajac je marchewke")
 
-
-class Krolik(Ofiara):
-    pass
-
-class Orzel(Lowca):
-    pass
-
-class Ryba(Lowca, Ofiara):
-    pass
-
-krolik = Krolik()
-orzel = Orzel()
-ryba = Ryba()
-
-krolik.ucieknij()
-orzel.polowac()
-ryba.polowac()
-ryba.ucieknij()
+zajac = Zajac()
+zajac.jedzenie()
