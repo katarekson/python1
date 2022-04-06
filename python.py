@@ -1,40 +1,24 @@
-<<<<<<< HEAD
-class Zwierze:
+class Auto:
     
-    def jedzenie(self):
-        print("To zwierze je")
+    def wlaczanie(self):
+        print("Silnik sie odpala")
+        return self
+    
+    def jezdzenie(self):
+        print("Jezdzisz autem")
+        return self
         
-class Zajac(Zwierze):
-    def jedzenie(self):
-        print("Ten zajac je marchewke")
-
-zajac = Zajac()
-zajac.jedzenie()
-=======
-class Ofiara:
-    
-    def ucieknij(self):
-        print("To zwierze ucieka")
+    def hamulec(self):
+        print("Naciskasz hamulec")
+        return self
         
-class Lowca:
-    
-    def polowac(self):
-        print("To zwierze poluje")
+    def wylacz(self):
+        print("Wylaczasz auto")
+        return self
+        
+auto = Auto()
 
-
-class Krolik(Ofiara):
-    pass
-
-class Orzel(Lowca):
-    pass
-
-class Ryba(Lowca, Ofiara):
-    pass
-
-krolik = Krolik()
-orzel = Orzel()
-ryba = Ryba()
-
-krolik.ucieknij
-orzel.poluje
->>>>>>> 4d588c1022d5566eb3c8bf94725269f0497737c4
+auto.wlaczanie()\
+    .jezdzenie()\
+    .hamulec()\
+    .wylacz()
