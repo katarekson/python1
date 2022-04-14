@@ -1,29 +1,11 @@
-class Kaczka:
-    
-    def chodzenie(self):
-        print("Kaczka chodzi")
-        
-    def odglos(self):
-        print("Kaczka kwacze")
-        
-class Kurczak:
-    
-    def chodzenie(self):
-        print("Kurczak chodzi")
-        
-    def odglos(self):
-        print("Kurczak gdaka")
-        
-    
-class Osoba():
-    
-    def zlapanie(self, kaczka):
-        kaczka.chodzenie()
-        kaczka.odglos()
-        print("Zlapales ja!!")
-        
-kaczka = Kaczka()
-kurczak = Kurczak()
-osoba = Osoba()
+# jedzenie = list()
 
-osoba.zlapanie(kurczak)
+# while True:
+#     food = input("Jakie jedzenie lubisz?: ")
+#     if food == "wyjdz":
+#         break
+#     jedzenie.append(jedzenie)
+
+jedzenia = list()
+while jedzenie := input("Jakie jedzenie lubisz?: ") != "wyjdz":
+    jedzenia.append(jedzenie)
