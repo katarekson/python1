@@ -1,12 +1,13 @@
-sklep = [("Podkoszulka", 50.00),
-         ("Spodnie", 129.00),
-         ("Bluza", 259.00),
-         ("Skarpetki", 23.00)]
+przyjaciele = [("Patrycja", 17),
+               ("Kacper", 18),
+               ("Krzysztof", 21),
+               ("Karol", 20),
+               ("Michal", 16)]
 
-to_pln = lambda data: (data[0],data[1]*4.64)
-to_euro = lambda data: (data[0],data[1]/4.64)
 
-sklep_euro = list(map(to_euro, sklep))
+wiek = lambda data:data[1] >= 18 
 
-for i in sklep_euro:
+przyjaciele_do_picia = list(filter(wiek, przyjaciele))
+
+for i in przyjaciele_do_picia:
     print(i)
