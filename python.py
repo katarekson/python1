@@ -1,13 +1,21 @@
-# def czesc():
-#     print("czesc")
+# #Akceptuje funkcje jako argument czyli funkcje glosno lub cicho jako argument po prostu
+
+# def glosno(text):
+#     return text.upper()
+
+# def cicho(text):
+#     return text.lower()
+
+# def czesc(func):
+#     text = func("Witam")
+#     print(text)
     
+# czesc(cicho)
 
-# siema = czesc
+def dzielnik(x):
+    def dzielna(y):
+        return y / x
+    return dzielna
 
-# czesc()
-# siema()
-
-##########Dzieje sie to przez to ze sa pod tym samym adresem##########
-powiedz = print
-
-powiedz("Witam siema")
+podziel = dzielnik(3)
+print(podziel(11))
