@@ -1,11 +1,13 @@
-# jedzenie = list()
+# def czesc():
+#     print("czesc")
+    
 
-# while True:
-#     food = input("Jakie jedzenie lubisz?: ")
-#     if food == "wyjdz":
-#         break
-#     jedzenie.append(jedzenie)
+# siema = czesc
 
-jedzenia = list()
-while jedzenie := input("Jakie jedzenie lubisz?: ") != "wyjdz":
-    jedzenia.append(jedzenie)
+# czesc()
+# siema()
+
+##########Dzieje sie to przez to ze sa pod tym samym adresem##########
+powiedz = print
+
+powiedz("Witam siema")
