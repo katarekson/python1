@@ -1,13 +1,12 @@
-przyjaciele = [("Patrycja", 17),
-               ("Kacper", 18),
-               ("Krzysztof", 21),
-               ("Karol", 20),
-               ("Michal", 16)]
+import functools
 
 
-wiek = lambda data:data[1] >= 18 
+# literki = ["C","Z","E","S","C"]
 
-przyjaciele_do_picia = list(filter(wiek, przyjaciele))
+# slowo = functools.reduce(lambda x, y,:x + y ,literki)
+# print(slowo)
 
-for i in przyjaciele_do_picia:
-    print(i)
+silnia = [5,4,3,2,1]
+
+wynik = functools.reduce(lambda x, y,:x * y ,silnia)
+print(wynik)
