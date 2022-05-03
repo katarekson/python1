@@ -1,12 +1,19 @@
-import functools
+# #dluzsza wersja 
+# kwadraty = []
+# for i in range(1,11):
+#     kwadraty.append(i * i)
+# print(kwadraty)
 
 
-# literki = ["C","Z","E","S","C"]
+# #list comprehension - krotsza wersja
+# kwadraty = [i * i for i in range(1,11)]
+# print(kwadraty)
 
-# slowo = functools.reduce(lambda x, y,:x + y ,literki)
-# print(slowo)
 
-silnia = [5,4,3,2,1]
+studenci = [100,60,48,90,97,70,0]
 
-wynik = functools.reduce(lambda x, y,:x * y ,silnia)
-print(wynik)
+# zdani_studenci = [x >= 60 for x in studenci]
+# zdani_studenci = [i for i in studenci if i >= 60]
+zdani_studenci = [i if i >= 60 else "niezdani" for i in studenci ]
+
+print(zdani_studenci)
