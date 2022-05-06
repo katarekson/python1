@@ -1,19 +1,39 @@
-# #dluzsza wersja 
-# kwadraty = []
-# for i in range(1,11):
-#     kwadraty.append(i * i)
-# print(kwadraty)
+# -----------------------------------------------------------------------
 
+# miasta_w_C = {'Krakow': 24, 'Warszawa': 20, 'Poznan':28, 'Lodz':25}
 
-# #list comprehension - krotsza wersja
-# kwadraty = [i * i for i in range(1,11)]
-# print(kwadraty)
+# miasta_w_F= {key: round((value*1.8)+32) for (key,value) in miasta_w_C.items()}
 
+# print(miasta_w_F)
 
-studenci = [100,60,48,90,97,70,0]
+# -----------------------------------------------------------------------
 
-# zdani_studenci = [x >= 60 for x in studenci]
-# zdani_studenci = [i for i in studenci if i >= 60]
-zdani_studenci = [i if i >= 60 else "niezdani" for i in studenci ]
+# miasta_pogoda = {'Krakow': "Slonce", 'Warszawa': "Slonce", 'Poznan': "Pada", 'Lodz': "Burza"}
 
-print(zdani_studenci)
+# Sloneczne_miasta = {key: value for (key,value) in miasta_pogoda.items() if value == "Slonce"}
+
+# print(Sloneczne_miasta)
+
+# -----------------------------------------------------------------------
+
+# miasta = {'Krakow': 24, 'Warszawa': 20, 'Poznan':28, 'Lodz':25}
+
+# opis_miasta = {key: ("Cieplo" if value >= 23 else "zimno") for (key,value) in miasta.items()}
+
+# print(opis_miasta)
+
+# -----------------------------------------------------------------------
+
+def sprawdz_temp(value):
+    if value >=25:
+        return "Goraco"
+    elif 24>= value >=15:
+        return "Cieplo"
+    else:
+        return "Zimno"
+
+miasta = {'Krakow': 24, 'Warszawa': 20, 'Poznan':28, 'Lodz':25, 'Zakopane': 14}
+
+opis_miasta = {key: sprawdz_temp(value) for (key,value) in miasta.items()}
+
+print(opis_miasta)
