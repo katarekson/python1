@@ -1,39 +1,19 @@
-# -----------------------------------------------------------------------
+# nazwy_uzytkownika = ["Mirek", "Kacper", "Michal"]
+# haslo = ("zaq1@WSX", "niezlehaslo2137", "kulhaslo2305")
 
-# miasta_w_C = {'Krakow': 24, 'Warszawa': 20, 'Poznan':28, 'Lodz':25}
+# uzytkownicy = dict(zip(nazwy_uzytkownika, haslo))
 
-# miasta_w_F= {key: round((value*1.8)+32) for (key,value) in miasta_w_C.items()}
+# print(type(uzytkownicy))
 
-# print(miasta_w_F)
+# for key,value in uzytkownicy.items():
+#     print(key+" : "+value)
+    
+    
+nazwy_uzytkownika = ["Mirek", "Kacper", "Michal"]
+haslo = ("zaq1@WSX", "niezlehaslo2137", "kulhaslo2305")
+data_logowania = ["01/03/2020","06/02/2021","16/03/2021"]
 
-# -----------------------------------------------------------------------
+uzytkownicy = zip(nazwy_uzytkownika,haslo,data_logowania)
 
-# miasta_pogoda = {'Krakow': "Slonce", 'Warszawa': "Slonce", 'Poznan': "Pada", 'Lodz': "Burza"}
-
-# Sloneczne_miasta = {key: value for (key,value) in miasta_pogoda.items() if value == "Slonce"}
-
-# print(Sloneczne_miasta)
-
-# -----------------------------------------------------------------------
-
-# miasta = {'Krakow': 24, 'Warszawa': 20, 'Poznan':28, 'Lodz':25}
-
-# opis_miasta = {key: ("Cieplo" if value >= 23 else "zimno") for (key,value) in miasta.items()}
-
-# print(opis_miasta)
-
-# -----------------------------------------------------------------------
-
-def sprawdz_temp(value):
-    if value >=25:
-        return "Goraco"
-    elif 24>= value >=15:
-        return "Cieplo"
-    else:
-        return "Zimno"
-
-miasta = {'Krakow': 24, 'Warszawa': 20, 'Poznan':28, 'Lodz':25, 'Zakopane': 14}
-
-opis_miasta = {key: sprawdz_temp(value) for (key,value) in miasta.items()}
-
-print(opis_miasta)
+for i in uzytkownicy:
+    print(i)
