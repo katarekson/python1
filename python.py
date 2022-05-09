@@ -1,27 +1,35 @@
+import threading
 import time
 
-# print(time.ctime(10000000000))
+def sniadanie():
+    time.sleep(3)
+    print("Jesz sniadanie")
+    
+def kawa():
+    time.sleep(4)
+    print("Pijesz kawe")
+    
 
-# print(time.time())
+def uczenie():
+    time.sleep(5)
+    print("Uczysz sie")
 
-# print(time.ctime(time.time()))
+x = threading.Thread(target=sniadanie, args=())
+x.start()
+y = threading.Thread(target=kawa, args=())
+y.start()
+z = threading.Thread(target=uczenie, args=())
+z.start()
 
-# czasownik = time.localtime()
-# obiekt_czasowy = time.gmtime()
-# print(czasownik)
-# lokalny_czas = time.strftime("%Y-%m-%d %B %H:%M %S", czasownik)
-# print(lokalny_czas)
+x.join()
+y.join()
+z.join()
 
-
-# czasowy = "17 April, 2006"
-# czasowy_obiekt = time.strptime(czasowy, "%d %B, %Y")
-# print(czasowy_obiekt)
-
-czasowy_tuple = (2006, 4, 20, 0, 6, 9, 0, 0, 0)
-czasowy_string = time.asctime(czasowy_tuple,)
-print(czasowy_string)
+# sniadanie()
+# kawa()
+# uczenie()
 
 
-czasowy_tuple = (2006, 4, 20, 0, 6, 9, 0, 0, 0)
-czasowy_string = time.mktime(czasowy_tuple,)
-print(czasowy_string)
+print(threading.active_count())
+print(threading.enumerate())
+print(time.perf_counter())
