@@ -1,35 +1,18 @@
 import threading
 import time
 
-def sniadanie():
-    time.sleep(3)
-    print("Jesz sniadanie")
-    
-def kawa():
-    time.sleep(4)
-    print("Pijesz kawe")
-    
+def stoper():
+    print()
+    count = 0
+    while True:
+        time.sleep(1)
+        count += 1
+        print("Jestes zalogowany: ",count, "sekund")
 
-def uczenie():
-    time.sleep(5)
-    print("Uczysz sie")
-
-x = threading.Thread(target=sniadanie, args=())
+x = threading.Thread(target=stoper, daemon=True)
 x.start()
-y = threading.Thread(target=kawa, args=())
-y.start()
-z = threading.Thread(target=uczenie, args=())
-z.start()
 
-x.join()
-y.join()
-z.join()
+# x.setDaemon(True)
 
-# sniadanie()
-# kawa()
-# uczenie()
-
-
-print(threading.active_count())
-print(threading.enumerate())
-print(time.perf_counter())
+print(x.isDaemon())
+odpowiedz = input("Chcesz wyjsc?")
