@@ -1,18 +1,52 @@
-import threading
+from multiprocessing import Process, cpu_count 
 import time
 
-def stoper():
-    print()
+
+def licznik(num):
     count = 0
-    while True:
-        time.sleep(1)
+    while count < num:
         count += 1
-        print("Jestes zalogowany: ",count, "sekund")
 
-x = threading.Thread(target=stoper, daemon=True)
-x.start()
 
-# x.setDaemon(True)
+def main():
+    
+    print(cpu_count())
+    
+    a = Process(target=licznik, args=(25000000000,))
+    a.start()
+    
+    b = Process(target=licznik, args=(25000000000,))
+    b.start()
+    
+    c = Process(target=licznik, args=(25000000000,))
+    c.start()
+    
+    d = Process(target=licznik, args=(25000000000,))
+    d.start()
+    
+    e = Process(target=licznik, args=(25000000000,))
+    e.start()
+    
+    f = Process(target=licznik, args=(25000000000,))
+    f.start()
+    
+    g = Process(target=licznik, args=(25000000000,))
+    g.start()
+    
+    h = Process(target=licznik, args=(25000000000,))
+    h.start()
+    
+    a.join
+    b.join
+    c.join
+    d.join
+    e.join
+    f.join
+    g.join
+    h.join
+    
+    print("Zakończono w: ", time.perf_counter(), " sekund")
 
-print(x.isDaemon())
-odpowiedz = input("Chcesz wyjsc?")
+
+if  __name__ == '__main__':
+    main()
