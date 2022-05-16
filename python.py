@@ -1,12 +1,24 @@
 from tkinter import *
 
 okno = Tk()
-okno.geometry("400x1000")
-okno.title("Okienko fajne Essa?!?!")
+# okno.geometry("1000x500")
+okno.title("Halal piesus")
+zdjecie = PhotoImage(file='C:\\Users\\Miros\\Downloads\\piesus.png')
 
-# ikonka = PhotoImage(file='C:\Users\Miros\Downloads\kaczka.jpg')
-# okno.iconphoto(True, ikonka)
-okno.config(background="green")
+label = Label(okno, 
+              text="Haram halal bismillah mashallah", 
+              font=('Arial',60,'bold'),
+              fg='blue',
+              bg='black',
+              relief=RAISED,
+              bd=10,
+              padx=20,
+              pady=20,
+              image=zdjecie,
+              compound='bottom',)
+
+label.pack()
+# label.place(x=100,y=100)
 
 
 okno.mainloop()
