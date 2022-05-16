@@ -1,29 +1,38 @@
 from tkinter import *
 
+def submit():
+    nazwa = entry.get()
+    print("Czesc "+nazwa)
+    entry.config(state=DISABLED)
+
+def delete():
+    entry.delete(0, END)
+    
+def backspace():
+    entry.delete(len(entry.get())-1 ,END)
+
 okno = Tk()
 
-count = 0
+entry = Entry(okno,
+              font=("Comic Sans", 20),
+              fg="blue",
+              bg="black",
+              show="*")
+
+# entry.insert(0,'PODAJ IMIE')
+entry.pack(side=LEFT)
+
+submit_button = Button(okno, text="Zgodz sie",command=submit)
+submit_button.pack(side=RIGHT)
+
+delete_button = Button(okno, text="Usun",command=delete)
+delete_button.pack(side=RIGHT)
+
+backspace_button = Button(okno, text="Cofnij",command=backspace)
+backspace_button.pack(side=RIGHT)
 
 
-def click():
-    global count
-    count+=1
-    print("Kliknales przycisk B)")
-    print("Stales sie tyle razy ziomem: ",count)
-    
-zdjecie = PhotoImage(file='C:\\Users\\Miros\\Downloads\\kok.png')
 
-przycisk = Button(okno,
-                  text="kliknij by stac sie ziomem!",
-                  command=click,
-                  font =("Comic Sans", 20),
-                  fg='Blue',
-                  bg='Black',
-                  activeforeground='Blue',
-                  activebackground='Red',
-                  state=ACTIVE,
-                  image=zdjecie,
-                  compound='bottom',)
-przycisk.pack()
 
-window = mainloop()
+
+okno.mainloop()
