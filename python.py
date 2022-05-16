@@ -1,24 +1,29 @@
 from tkinter import *
 
 okno = Tk()
-# okno.geometry("1000x500")
-okno.title("Halal piesus")
-zdjecie = PhotoImage(file='C:\\Users\\Miros\\Downloads\\piesus.png')
 
-label = Label(okno, 
-              text="Haram halal bismillah mashallah", 
-              font=('Arial',60,'bold'),
-              fg='blue',
-              bg='black',
-              relief=RAISED,
-              bd=10,
-              padx=20,
-              pady=20,
-              image=zdjecie,
-              compound='bottom',)
-
-label.pack()
-# label.place(x=100,y=100)
+count = 0
 
 
-okno.mainloop()
+def click():
+    global count
+    count+=1
+    print("Kliknales przycisk B)")
+    print("Stales sie tyle razy ziomem: ",count)
+    
+zdjecie = PhotoImage(file='C:\\Users\\Miros\\Downloads\\kok.png')
+
+przycisk = Button(okno,
+                  text="kliknij by stac sie ziomem!",
+                  command=click,
+                  font =("Comic Sans", 20),
+                  fg='Blue',
+                  bg='Black',
+                  activeforeground='Blue',
+                  activebackground='Red',
+                  state=ACTIVE,
+                  image=zdjecie,
+                  compound='bottom',)
+przycisk.pack()
+
+window = mainloop()
