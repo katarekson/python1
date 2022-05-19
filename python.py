@@ -1,38 +1,33 @@
 from tkinter import *
 
-def submit():
-    nazwa = entry.get()
-    print("Czesc "+nazwa)
-    entry.config(state=DISABLED)
-
-def delete():
-    entry.delete(0, END)
-    
-def backspace():
-    entry.delete(len(entry.get())-1 ,END)
+def display():
+    if(x.get()=="TAK"):
+        print("Zgodziles sie")
+    else:
+        print("Nie zgodziles sie")
 
 okno = Tk()
 
-entry = Entry(okno,
-              font=("Comic Sans", 20),
-              fg="blue",
-              bg="black",
-              show="*")
+# x = IntVar()
+x = StringVar()
 
-# entry.insert(0,'PODAJ IMIE')
-entry.pack(side=LEFT)
+zdjecie = PhotoImage(file='C:\\Users\\Miros\\Downloads\\piesus.png')
 
-submit_button = Button(okno, text="Zgodz sie",command=submit)
-submit_button.pack(side=RIGHT)
+check_button = Checkbutton(okno, 
+                           text="Zgadzam sie na cos",
+                           variable=x,
+                           onvalue="TAK",
+                           offvalue="NIE",
+                           command=display,
+                           font=('Comic Sans', 24),
+                           fg='Blue',
+                           bg='Black',
+                           activeforeground='Blue',
+                           activebackground='Black',
+                           padx=25,
+                           pady=20,
+                           image=zdjecie,
+                           compound='right')
 
-delete_button = Button(okno, text="Usun",command=delete)
-delete_button.pack(side=RIGHT)
-
-backspace_button = Button(okno, text="Cofnij",command=backspace)
-backspace_button.pack(side=RIGHT)
-
-
-
-
-
+check_button.pack()
 okno.mainloop()
