@@ -1,33 +1,42 @@
 from tkinter import *
 
-def display():
-    if(x.get()=="TAK"):
-        print("Zgodziles sie")
+
+jedzenie = ["pizza","burgir","stek"]
+
+def zamowienie():
+    if(x.get()==0):
+        print("zamowiles pizze")
+    elif(x.get()==1):
+        print("zamowiles burgera")
+    elif(x.get()==2):
+        print("zamowiles steka")
     else:
-        print("Nie zgodziles sie")
+        print("co?")
 
 okno = Tk()
 
-# x = IntVar()
-x = StringVar()
 
-zdjecie = PhotoImage(file='C:\\Users\\Miros\\Downloads\\piesus.png')
+# obrazek_pizzy = PhotoImage(file='filepath')
+# obrazek_burgira = PhotoImage(file='filepath')
+# obrazek_steka = PhotoImage(file='filepath')
+# obrazki_jedzenia = [obrazek_pizzy,obrazek_burgira,obrazek_steka]
 
-check_button = Checkbutton(okno, 
-                           text="Zgadzam sie na cos",
-                           variable=x,
-                           onvalue="TAK",
-                           offvalue="NIE",
-                           command=display,
-                           font=('Comic Sans', 24),
-                           fg='Blue',
-                           bg='Black',
-                           activeforeground='Blue',
-                           activebackground='Black',
-                           padx=25,
-                           pady=20,
-                           image=zdjecie,
-                           compound='right')
+x = IntVar()
 
-check_button.pack()
+for index in range(len(jedzenie)):
+    radiobutton = Radiobutton(okno,
+                              text=jedzenie[index], #dodaje tekst do pryzciskow
+                              variable=x, #grupuje pryciski
+                              value=index, #daje kazdemu przyciskowi wartosc
+                              padx = 25,
+                              pady = 15,
+                              font = ('Comic Sans', 30),
+                              #image = obrazki_jedzenia[index] #dodaje obrazek
+                              #compound = 'right' #dodaje obrazek i tekst
+                              indicatoron=0, #daje inny przycisk
+                              width = 50,
+                              command = zamowienie, #dzieki temu mamy komende
+                              )
+    radiobutton.pack(anchor=W)
+
 okno.mainloop()
