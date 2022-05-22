@@ -1,42 +1,27 @@
 from tkinter import *
 
-
-jedzenie = ["pizza","burgir","stek"]
-
-def zamowienie():
-    if(x.get()==0):
-        print("zamowiles pizze")
-    elif(x.get()==1):
-        print("zamowiles burgera")
-    elif(x.get()==2):
-        print("zamowiles steka")
-    else:
-        print("co?")
+def submit():
+    print("Temperatura wynosi: "+ str(scale.get())+ " celcjusza")
 
 okno = Tk()
 
+scale = Scale(okno,
+              from_=-10,
+              to=50,
+              length=500,
+              orient=HORIZONTAL,
+              font = ('Comic Sans', 15),
+              tickinterval=10, #Liczby na skali
+              showvalue = 0, #ukrywa wartosc
+              troughcolor = 'green', #kolor slidera
+              fg= 'red',
+              bg= 'black',
+              )
 
-# obrazek_pizzy = PhotoImage(file='filepath')
-# obrazek_burgira = PhotoImage(file='filepath')
-# obrazek_steka = PhotoImage(file='filepath')
-# obrazki_jedzenia = [obrazek_pizzy,obrazek_burgira,obrazek_steka]
+scale.set(((scale['from']-scale['to'])/2)+scale['to'])
 
-x = IntVar()
+scale.pack()
 
-for index in range(len(jedzenie)):
-    radiobutton = Radiobutton(okno,
-                              text=jedzenie[index], #dodaje tekst do pryzciskow
-                              variable=x, #grupuje pryciski
-                              value=index, #daje kazdemu przyciskowi wartosc
-                              padx = 25,
-                              pady = 15,
-                              font = ('Comic Sans', 30),
-                              #image = obrazki_jedzenia[index] #dodaje obrazek
-                              #compound = 'right' #dodaje obrazek i tekst
-                              indicatoron=0, #daje inny przycisk
-                              width = 50,
-                              command = zamowienie, #dzieki temu mamy komende
-                              )
-    radiobutton.pack(anchor=W)
-
+button = Button(okno,text='Wyslij', command=submit)
+button.pack()
 okno.mainloop()
